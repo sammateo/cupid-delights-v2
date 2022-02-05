@@ -14,9 +14,12 @@ const Menu = () => {
 	});
 	const [checkout, setCheckout] = useState(false);
 	const checkoutFunction = () => {
-		order.quantity >= 5 && order.quantity <= 40
-			? setCheckout(true)
-			: setCheckout(false) && alert("Minimum Order is 5 roti skins");
+		if (order.quantity >= 5 && order.quantity <= 40) {
+			setCheckout(true);
+		} else {
+			setCheckout(false);
+			alert("Minimum Order is 5 roti skins");
+		}
 	};
 	let logosize = 100;
 	return (
