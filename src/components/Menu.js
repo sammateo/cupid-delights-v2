@@ -21,7 +21,13 @@ const Menu = () => {
 	let logosize = 100;
 	return (
 		<div className="menu">
-			<img src="/logo.jpeg" width={logosize} height={logosize} alt="logo"></img>
+			<img
+				src="/logo.jpeg"
+				style={{ borderRadius: "50%", marginTop: "5px" }}
+				width={logosize}
+				height={logosize}
+				alt="logo"
+			></img>
 
 			<h3>Order Here</h3>
 			<p style={{ color: "red" }}>Note:</p>

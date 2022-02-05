@@ -7,9 +7,9 @@ const Checkout = ({ menuItems, order }) => {
 	let body = `Order:${menuItems.map(
 		(item) =>
 			`\n${item.quantity} of ${item.name} @ ${formatter.format(item.price)} |`
-	)} \nCost: ${formatter.format(order.total)}\nQuantity: ${formatter.format(
+	)} \nCost: ${formatter.format(order.total)}\nQuantity: ${
 		order.quantity
-	)}\nShipping: ${formatter.format(order.shipping)}\nTotal: ${formatter.format(
+	}\nShipping: ${formatter.format(order.shipping)}\nTotal: ${formatter.format(
 		order.total + order.shipping
 	)}`;
 

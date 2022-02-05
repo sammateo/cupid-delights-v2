@@ -14,24 +14,46 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<>
+							<div
+								style={{
+									background: 'url("/gallery/roll.jpg")',
+									backgroundPosition: "center",
+									backgroundRepeat: "no-repeat",
+									backgroundSize: "cover",
+									paddingBottom: "10px",
+								}}
+							>
 								<ShippingSection />
 								<Menu />
-								<Link to="/gallery">
+								<Link
+									to="/gallery"
+									style={{
+										display: "block",
+										width: "fit-content",
+										margin: "auto",
+									}}
+								>
 									<button className="ShippingButton navBtn">To Gallery</button>
 								</Link>
-							</>
+							</div>
 						}
 					/>
 					<Route
 						path="/gallery"
 						element={
-							<>
+							<div style={{ paddingBottom: "10px" }}>
 								<Gallery />
-								<Link to="/">
+								<Link
+									to="/"
+									style={{
+										display: "block",
+										width: "fit-content",
+										margin: "auto",
+									}}
+								>
 									<button className="ShippingButton navBtn">To Home</button>
 								</Link>
-							</>
+							</div>
 						}
 					/>
 				</Routes>
